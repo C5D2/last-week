@@ -26,6 +26,7 @@ import {
 // 3. 해당 id 값을 가진 li를 제거하기 (remove)
 // 4. todoArray 아이템 제거하기 (filter)
 // 5. storage 업데이트 (setStorage)
+// 6. 함수 분리
 
 // [phase-4]
 // 1. IIFE 만들기
@@ -53,6 +54,15 @@ const addItemArray = (id, todoItem) => {
   console.log(todoArray);
 };
 
+const removeItem = (id) => {
+  const li = $(`[data-id="${id}"]`);
+  li.remove();
+};
+
+const removeItemArray = (id) => {
+  todoArray = todoArray.filter((item) => item.id !== +id);
+};
+
 const handleSubmit = (e) => {
   e.preventDefault();
   const todoItem = input.value;
@@ -71,16 +81,33 @@ const handleRemove = (e) => {
   const id = target.dataset.id;
 
   if (!id) return;
-
-  const li = $(`[data-id="${id}"]`);
-  li.remove();
-
-  // 필터를 하고 배열 반환
-  todoArray.filter((item) => {
-    return item.id !== id;
-  });
-  console.log(todoArray);
+  removeItem(id);
+  removeItemArray(id);
+  setStorage("todo", todoArray);
 };
 
 form.addEventListener("submit", handleSubmit);
 list.addEventListener("click", handleRemove);
+
+// [phase-4]
+// 1. IIFE 만들기
+// 2. 스토리지 데이터 가져오기 (getStorage)
+//    - Promise<Object>
+
+// 3. 비동기 처리로 데이터 받기 (then | await)
+//    - async
+
+// 4. 렌더링하기 (renderItem)
+//    - array.forEach ....
+
+// 5. 데이터가 없을 경우 에러처리
+
+// IIAFE
+
+(async () => {
+  const initList = await getStorage("todo");
+  if (!initList) return;
+  initList.forEach(({ todoItem, id }) =>
+    renderItem({ target: list, todoItem, id })
+  );
+})();
