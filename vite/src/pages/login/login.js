@@ -3,7 +3,7 @@ import '/src/pages/login/login.css';
 import { clearContents, setDocumentTitle } from 'kind-tiger';
 import pb from '/src/api/pocketbase';
 import { getNode, getStorage, setStorage } from 'kind-tiger';
-import { gsap } from 'gsap';
+import gsap from 'gsap';
 
 setDocumentTitle('290cm / 로그인');
 

@@ -1,7 +1,7 @@
 import '/src/pages/layout';
 import '/src/pages/register/register.css';
 import { setDocumentTitle, getNode } from 'kind-tiger';
-import { gsap } from 'gsap';
+import gsap from 'gsap';
 import pb from '/src/api/pocketbase';
 
 setDocumentTitle('290cm / 회원가입');
