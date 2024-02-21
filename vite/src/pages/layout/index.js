@@ -31,7 +31,7 @@ const header = async () => {
     a.textContent = '로그아웃';
 
     a.addEventListener('click', () => {
-      if (confirm('정말 로그아웃 하시겠습니까...?')) {
+      if (confirm('정말 로그아웃 하시겠습니까?')) {
         pb.authStore.clear();
         deleteStorage('auth');
         window.location.reload();
