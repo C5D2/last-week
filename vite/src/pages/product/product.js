@@ -3,7 +3,6 @@ import { getPbImageURL } from '/src/api/getPbImageURL';
 import pb from '/src/api/pocketbase';
 import '/src/pages/layout';
 import '/src/pages/product/product.css';
-import gsap from 'gsap';
 
 setDocumentTitle('290cm / 상품목록');
 

@@ -1,6 +1,5 @@
 import '/src/pages/layout';
 import '/src/styles/style.css';
-import gsap from 'gsap';
 import { getStorage, insertLast, getNode, deleteStorage } from 'kind-tiger';
 import pb from '/src/api/pocketbase';
 
