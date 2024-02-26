@@ -1,11 +1,6 @@
 import '/src/pages/layout';
 import '/src/styles/style.css';
-import {
-  getStorage,
-  insertLast,
-  getNode,
-  deleteStorage,
-} from '/node_modules/kind-tiger/index.js';
+import { getStorage, insertLast, getNode, deleteStorage } from 'kind-tiger';
 import pb from '/src/api/pocketbase';
 
 const tl = gsap.timeline();

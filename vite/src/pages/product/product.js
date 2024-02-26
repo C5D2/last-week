@@ -1,8 +1,4 @@
-import {
-  insertLast,
-  comma,
-  setDocumentTitle,
-} from '/node_modules/kind-tiger/index.js';
+import { insertLast, comma, setDocumentTitle } from 'kind-tiger';
 import { getPbImageURL } from '/src/api/getPbImageURL';
 import pb from '/src/api/pocketbase';
 import '/src/pages/layout';

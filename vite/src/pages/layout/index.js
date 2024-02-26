@@ -1,9 +1,5 @@
 import '/src/pages/layout/header.css';
-import {
-  getNode,
-  getStorage,
-  deleteStorage,
-} from '/node_modules/kind-tiger/index.js';
+import { getNode, getStorage, deleteStorage } from 'kind-tiger';
 import pb from '/src/api/pocketbase';
 
 window.addEventListener('load', function () {
