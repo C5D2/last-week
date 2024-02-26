@@ -10,11 +10,11 @@
     "pocketbase": "pocketbase/pocketbase serve"
   },
   "devDependencies": {
+    "eslint": "^8.56.0",
     "prettier": "^3.2.5",
     "vite": "^5.1.0"
   },
   "dependencies": {
-    "eslint": "^8.56.0",
     "gsap": "^3.12.5",
     "kind-tiger": "^1.0.1",
     "pocketbase": "^0.21.1"

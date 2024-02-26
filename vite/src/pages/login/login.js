@@ -1,8 +1,15 @@
 import '/src/pages/layout';
 import '/src/pages/login/login.css';
-import { clearContents, setDocumentTitle } from 'kind-tiger';
+import {
+  clearContents,
+  setDocumentTitle,
+} from '/node_modules/kind-tiger/index.js';
 import pb from '/src/api/pocketbase';
-import { getNode, getStorage, setStorage } from 'kind-tiger';
+import {
+  getNode,
+  getStorage,
+  setStorage,
+} from '/node_modules/kind-tiger/index.js';
 
 setDocumentTitle('290cm / 로그인');
 

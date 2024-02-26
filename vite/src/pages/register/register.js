@@ -1,6 +1,6 @@
 import '/src/pages/layout';
 import '/src/pages/register/register.css';
-import { setDocumentTitle, getNode } from 'kind-tiger';
+import { setDocumentTitle, getNode } from '/node_modules/kind-tiger/index.js';
 import pb from '/src/api/pocketbase';
 
 setDocumentTitle('290cm / 회원가입');
